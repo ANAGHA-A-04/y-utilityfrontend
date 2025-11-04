@@ -1,0 +1,17 @@
+.app-footer {
+  background-color: #1f2937; /* Cool Gray 800 */
+  color: #d1d5db; /* Cool Gray 300 */
+  padding: 2rem 1.5rem;
+  margin-top: auto; /* Pushes footer to the bottom in flex container */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.app-footer p {
+  margin: 0.25rem 0;
+}

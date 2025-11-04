@@ -1,0 +1,312 @@
+/* === Global Styles === */
+:root {
+  --primary-color: #6d28d9; /* Deep Purple */
+  --primary-light: #8b5cf6; /* Lighter Purple */
+  --secondary-color: #10b981; /* Emerald Green */
+  --text-dark: #1f2937;      /* Cool Gray 800 */
+  --text-light: #6b7280;     /* Cool Gray 500 */
+  --background-color: #f9fafb; /* Cool Gray 50 */
+  --surface-color: #ffffff;
+  --border-color: #e5e7eb;   /* Cool Gray 200 */
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --border-radius: 0.5rem; /* 8px */
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-dark);
+  background-color: var(--background-color);
+  line-height: 1.5;
+}
+
+/* === Header === */
+.app-header {
+  background-color: var(--surface-color);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.app-header nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.app-header nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.app-header nav a:hover,
+.app-header nav a.active {
+  color: var(--primary-color);
+}
+
+/* === Main Content & Layout === */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-main {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+.page-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+/* === Main Content & Layout === */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-main {
+  flex-grow: 1;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+/* === Cards & Grids (for Dashboard) === */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--surface-color);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+}
+
+.card .big {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.card a {
+    color: var(--primary-light);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* === Buttons & Forms === */
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-light);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn.secondary {
+  background-color: var(--border-color);
+  color: var(--text-dark);
+}
+.btn.secondary:hover {
+  background-color: #d1d5db; /* Cool Gray 300 */
+}
+
+.form-input, select.form-input {
+  padding: 0.65rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box; /* Important for consistent sizing */
+}
+
+.inline-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.grid-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+/* === Lists (Players, Teams, etc.) === */
+.data-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.data-list li {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.data-list li:last-child {
+  border-bottom: none;
+}
+
+.management-panel {
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.management-panel h3 {
+  margin-top: 0;
+}
+
+/* === Match & Leaderboard Specifics === */
+.matches {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.match {
+  background: var(--surface-color);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.match-controls > div {
+  margin-bottom: 0.5rem;
+}
+
+.leaderboard {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.leaderboard th,
+.leaderboard td {
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem;
+  text-align: left;
+}
+
+.leaderboard th {
+  background-color: var(--background-color);
+  font-weight: 600;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-title {
+      font-size: 1.75rem;
+  }
+
+  .card .big {
+      font-size: 2.25rem;
+  }
+}
+
